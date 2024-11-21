@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleetman-position-tracker
+  labels:
+    app: fleetman
+    component: position-tracker
+spec:
+  type: NodePort # Service exposé en dehors du cluster (port accessible)
+  selector:
+    app: fleetman
+    component: position-tracker
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30010 # Expose le port 30010 pour un accès externe

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="5e420ca">
+        <description>Created after removal of "DOc" from Documentation 4Kube</description>
+        <accepts>DOc.html</accepts>
+    </rule>
+    <rule id="42f9fbfd">
+        <description>Created after removal of "About DOc4KUBE" from Documentation 4Kube</description>
+        <accepts>starter-topic.html</accepts>
+    </rule>
+    <rule id="75e7eecd">
+        <description>Created after removal of "Installation" from Documentation 4Kube</description>
+        <accepts>Installation.html</accepts>
+    </rule>
+</rules>

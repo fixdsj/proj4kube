@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fleetman-position-simulator
+  labels:
+    app: fleetman
+    component: position-simulator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fleetman
+      component: position-simulator
+  template:
+    metadata:
+      labels:
+        app: fleetman
+        component: position-simulator
+    spec:
+      containers:
+        - name: position-simulator
+          image: supinfo4kube/position-simulator:1.0.1
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "production-microservice" # Utilisation du profil production
+          ports:
+            - containerPort: 8080 # Port utilisé par l'application

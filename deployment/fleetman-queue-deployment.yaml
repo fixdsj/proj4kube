@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fleetman-queue
+  labels:
+    app: fleetman
+    component: queue
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fleetman
+      component: queue
+  template:
+    metadata:
+      labels:
+        app: fleetman
+        component: queue
+    spec:
+      containers:
+        - name: queue
+          image: supinfo4kube/queue:1.0.1
+          ports:
+            - containerPort: 8161 # Port HTTP d'ActiveMQ (console d'administration)
+            - containerPort: 61616 # Port du protocole de messagerie ActiveMQ

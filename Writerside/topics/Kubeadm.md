@@ -1,0 +1,2 @@
+# Configuration Kubernetes
+ Nous avons utilisé Kubeadm pour installer notre cluster Kubernetes pour plus de simplicité. Kubeadm est un outil qui permet de déployer un cluster Kubernetes en quelques commandes.
