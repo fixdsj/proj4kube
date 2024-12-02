@@ -5,7 +5,7 @@ metadata:
   labels:
     app: fleetman
     component: api-gateway
-spec:
+spec:ku
   type: NodePort
   selector:
     app: fleetman
