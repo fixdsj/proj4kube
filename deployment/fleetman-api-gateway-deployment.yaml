@@ -7,6 +7,11 @@ metadata:
     component: api-gateway
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1   # Max pods indisponibles durant la mise à jour
+      maxSurge: 1         # Max pods supplémentaires créés durant la mise à jour
   selector:
     matchLabels:
       app: fleetman
