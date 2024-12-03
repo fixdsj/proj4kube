@@ -29,8 +29,16 @@ spec:
             - containerPort: 27017
           volumeMounts:
             - name: mongo-data
-              mountPath: /data/db 
+              mountPath: /data/db
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
       volumes:
         - name: mongo-data
           persistentVolumeClaim:
-            claimName: mongo-data  
+            claimName: mongo-data
+

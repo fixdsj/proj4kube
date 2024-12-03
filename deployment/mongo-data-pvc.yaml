@@ -11,5 +11,5 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi # Taille du volume pour MongoDB
+      storage: 5Gi # Taille du volume pour MongoDB
   volumeName: mongo-data-pv 
