@@ -26,8 +26,8 @@ spec:
         - name: queue
           image: supinfo4kube/queue:1.0.1
           ports:
-            - containerPort: 8161
-            - containerPort: 61616
+            - containerPort: 8161 # Port HTTP d'ActiveMQ (console d'administration)
+            - containerPort: 61616 # Port du protocole de messagerie ActiveMQ
           resources:
             limits:
               memory: "512Mi"

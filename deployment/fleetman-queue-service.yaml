@@ -6,16 +6,16 @@ metadata:
     app: fleetman
     component: queue
 spec:
-  type: ClusterIP 
+  type: NodePort # Service exposé
   selector:
     app: fleetman
     component: queue
   ports:
-    - name: admin-port    
+    - name: admin-port    # Nom du port pour l'administration
       protocol: TCP
       port: 8161
-      targetPort: 8161    
-    - name: messaging-port 
+      targetPort: 8161    # Port exposé pour l'administration
+    - name: messaging-port # Nom du port pour les messages
       protocol: TCP
       port: 61616
-      targetPort: 61616 
+      targetPort: 61616   # Port utilisé par ActiveMQ pour les messages

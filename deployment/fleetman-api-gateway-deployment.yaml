@@ -27,9 +27,9 @@ spec:
           image: supinfo4kube/api-gateway:1.0.1
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "production-microservice" # Utilisation du profil
+              value: "production-microservice" # Utilisation du profil production
           ports:
-            - containerPort: 8080 
+            - containerPort: 8080 # Port utilisé par l'API Gateway
           resources:
             limits:
               memory: "512Mi"

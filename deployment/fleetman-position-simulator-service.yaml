@@ -6,7 +6,7 @@ metadata:
     app: fleetman
     component: position-simulator
 spec:
-  type: ClusterIP 
+  type: ClusterIP # Service interne pour la communication
   selector:
     app: fleetman
     component: position-simulator
