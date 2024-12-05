@@ -163,13 +163,9 @@ Services :
 
 Stockage :
 
-- mongo-storageclassname.yaml
+- mongo-data-pvc.yaml
 - mongo-data-pv-deployment.yaml
 
-on a utilisé un statefulset pour MongoDB. Son avantage principal est que le StatefulSet gère les pods avec un état, ce qui permet de maintenir les données persistantes dans des volumes liés.
-
-On a créé aussi un StorageClass personnalisé vous permet d'avoir une gestion dynamique des volumes persistants. Le StorageClass personnalisé (mongo-classname) permet de spécifier des volumes persistants pour chaque réplique de MongoDB, garantissant que les données de chaque réplique sont correctement stockées et persistées sur des disques locaux.
-En associant un StorageClass à un volumeClaimTemplate, on indique à Kubernetes de créer et d'attacher des volumes sans avoir à créer manuellement de PersistentVolumeClaims (PVC).
 
 
 Application des fichiers de configuration :
@@ -192,7 +188,7 @@ $ kubectl get services
 Accès à l'application web depuis un navigateur :
 
 ```plaintext
-http://<adresse_ip_worker>:30080
+http://<adresse_ip_master>:30080
 ```
 
 ## Conclusion
