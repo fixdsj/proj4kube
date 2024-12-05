@@ -27,9 +27,8 @@ spec:
           image: supinfo4kube/position-simulator:1.0.1
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "production-microservice" # Utilisation du profil production
-          ports:
-            - containerPort: 8080 # Port utilisé par l'application
+              value: "production-microservice" 
+            - containerPort: 8080
           resources:
             limits:
               memory: "512Mi"

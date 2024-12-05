@@ -4,7 +4,7 @@ metadata:
   name: fleetman-mongodb
 spec:
   serviceName: fleetman-mongo
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: fleetman
