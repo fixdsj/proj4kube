@@ -14,4 +14,3 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-      nodePort: 30010 # Expose le port 30010 pour un accès externe
