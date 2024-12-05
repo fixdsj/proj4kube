@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: fleetman-mongodb
+spec:
+  serviceName: fleetman-mongo
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fleetman
+      component: mongo
+  template:
+    metadata:
+      labels:
+        app: fleetman
+        component: mongo
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:3.6
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+        - name: mongo-data
+          mountPath: /data/db
+        resources:
+          requests:
+            memory: "512Mi"   
+            cpu: "500m"       
+          limits:
+            memory: "1Gi"     
+            cpu: "1000m"  
+  volumeClaimTemplates:
+  - metadata:
+      name: mongo-data
+    spec:
+      storageClassName: mongo-classname
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 2Gi
