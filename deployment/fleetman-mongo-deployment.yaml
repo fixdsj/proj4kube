@@ -6,7 +6,7 @@ metadata:
     app: fleetman
     component: mongo
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -41,3 +41,4 @@ spec:
         - name: mongo-data
           persistentVolumeClaim:
             claimName: mongo-data
+
