@@ -1,3 +1,0 @@
-# Utilisation
-
-Start typing here...
