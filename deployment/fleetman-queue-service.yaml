@@ -6,7 +6,7 @@ metadata:
     app: fleetman
     component: queue
 spec:
-  type: NodePort # Service exposé
+  type: ClusterIP
   selector:
     app: fleetman
     component: queue

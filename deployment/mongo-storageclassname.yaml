@@ -1,6 +1,0 @@
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: mongo-classname
-provisioner: kubernetes.io/no-provisioner  # Utilisé si vous ne voulez pas de provisionnement dynamique, sinon remplacez-le par un provisioner spécifique à votre stockage
-volumeBindingMode: WaitForFirstConsumer  # Cela signifie que le PV sera lié une fois qu'un pod consommateur (PVC) sera créé
