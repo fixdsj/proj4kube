@@ -142,6 +142,7 @@ $ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.26.
 #### 2.1 Création des Manifests
 
 Création les fichiers YAML pour chaque service (MongoDB, API, Web App).
+Copie des fichiers sur la machine master avec le projet GitHub.
 Se réferer aux fichiers de configuration fournis.
 Deployments :
 
