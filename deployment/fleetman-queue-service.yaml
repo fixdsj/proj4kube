@@ -18,5 +18,4 @@ spec:
     - name: messaging-port # Nom du port pour les messages
       protocol: TCP
       port: 61616
-      targetPort: 61616   # Port utilisé par ActiveMQ pour les messages
-      nodePort: 61616     
+      targetPort: 61616   # Port utilisé par ActiveMQ pour les messages    
