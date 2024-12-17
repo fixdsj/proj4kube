@@ -6,7 +6,7 @@ metadata:
     app: fleetman
     component: queue
 spec:
-  type: NodePort
+  type: NodePort # Service exposé
   selector:
     app: fleetman
     component: queue
@@ -18,4 +18,4 @@ spec:
     - name: messaging-port # Nom du port pour les messages
       protocol: TCP
       port: 61616
-      targetPort: 61616   # Port utilisé par ActiveMQ pour les messages    
+      targetPort: 61616   # Port utilisé par ActiveMQ pour les messages
