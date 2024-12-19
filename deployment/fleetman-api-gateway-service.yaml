@@ -6,7 +6,7 @@ metadata:
     app: fleetman
     component: api-gateway
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: fleetman
     component: api-gateway
@@ -14,4 +14,3 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-      nodePort: 30020 
